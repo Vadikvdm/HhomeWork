@@ -21,7 +21,7 @@ genderPeople();
 
 function pairStudents() {
     for (let i = 0; i < maleStudents.length; i++) {
-        newPair.push(maleStudents[i] + ' ' + femaleStudents[i]);
+        newPair.push([maleStudents[i], femaleStudents[i]]);
     }
     return newPair;
 }
@@ -29,7 +29,7 @@ console.log(pairStudents());
 
 function taskSorting() {
     for (let i = 0; i < newPair.length; i++) {
-        newPairThemes.push(newPair[i] + ', ' + themes[i]);
+        newPairThemes.push([newPair[i], themes[i]]);
     }
     return newPairThemes;
 }
@@ -37,7 +37,7 @@ console.log(taskSorting());
 
 function markStudents() {
     for (let i = 0; i < students.length; i++) {
-        marksStudents.push(students[i] + ', ' + marks[i]);
+        marksStudents.push([students[i], marks[i]]);
     }
     return marksStudents;
 }
@@ -56,7 +56,7 @@ studentsThemesMarks();
 
 function pairMarsStudents() {
     for (let i = 0; i < newPairThemes.length; i++) {
-        newPairMarks.push(newPairThemes[i] + ', ' + randomMarks[i]);
+        newPairMarks.push([newPairThemes[i], randomMarks[i]]);
     }
     return newPairMarks;
 }
