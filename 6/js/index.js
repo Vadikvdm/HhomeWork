@@ -24,6 +24,7 @@ const students = [{
     }
 }];
 
+
 const infoTanya = [];
 infoStudents ={};
 const nameStudents = [];
@@ -39,35 +40,24 @@ getSubjects();
 console.log(`Cписок предметів студента - ${students[0].name}: ${infoTanya}`);
 ///////////////////////////////////////////////////////////////////////////////////
 
-function getAverageMark() {
-  const qwer = students.map(element => {
-    let [arr1, ...rest] = Object.values(element.subjects);
-   
+function getAverageMark(students) {
+    let [arr1, ...rest] = Object.values(students.subjects);
     const sumArray = arr1.concat(...rest);
-    
-    
     const sumMarks = (sumArray.reduce((sum, el) => sum + el, 0) / sumArray.length).toFixed(2);
-    
     return sumMarks
-  });
-
-  qwer.find((el) => {
-    return el ;
-  })
-  
 }
+console.log(`Середня оцінка студента - ${students[0].name}: ${getAverageMark(students[0])}`);
 
 
-
-console.log(`Середня оцінка студента - ${students[0].name}: ${getAverageMark(students["Tanya"])}`);
 
 ////////////////////////////////////////////////////////////////////////////////
-function getStudentInfo() {
-  infoStudents.name = students[0].name
-  infoStudents.course = students[0].course
-  infoStudents.averageMark = getAverageMark(students[0]);
+function getStudentInfo(students) {
+  infoStudents.name = students.name
+  infoStudents.course = students.course
+  infoStudents.averageMark = getAverageMark(students);
 }
-getStudentInfo();
+getStudentInfo(students[0]);
+
 console.log(`інформація загального виду студенту`, infoStudents);
 ///////////////////////////////////////////////////////////////////////////////////
 
@@ -80,22 +70,21 @@ function getStudentsNames() {
 getStudentsNames();
 console.log(`Імена студентів у алфавітному порядку - ${nameStudents}`);
 ////////////////////////////////////////////////////////////////////////////////
-function getBestStudent() {
-return getAverageMark(Math.max(...Object.values(students[0])))
+
+function getBestStudent(students) {
+  newArrStudents.name = averageMark;
+  newArrStudents.averageMark = 5;
+  console.log(newArrStudents);
+  return Math.max(newArrStudents.averageMark)
 }
+console.log(getBestStudent(students));
+//////////////////////////////////////////////
 
-console.log(getBestStudent());
+// function getBestStudent() {
+ 
+//   return  Math.max(getAverageMark(students[0]), getAverageMark(students[1]), getAverageMark(students[2]));
 
-
-// const getAverageMark = (students) => {
-
-// const [a, b, c] = Object.values(students.subjects)
-//   let combinedArr = [...a, ...b, ...c]
-// let sum = 0;
-// for (let number of combinedArr) {
-//   sum += number;
-//   }
-// average = (sum / combinedArr.length).toFixed(2);
-// return average
 // }
-// console.log(getAverageMark(students[0])); 
+// console.log(getBestStudent(students.name));
+
+

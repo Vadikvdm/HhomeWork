@@ -1,0 +1,59 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Yaldevi";
+}
+h1, h2, h3, h4, h5, h6, ul, li, div, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: "Yaldevi";
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-weight: normal;
+    font-size: 14px;
+}
+.box {
+    background: linear-gradient(rgba(65, 49, 49, 0.5), rgba(0, 0, 0, 0.5)), url(../img/b8128a4721f837a712016ff9f28fb8be.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    
+}
+
+.button {
+    justify-content: center;
+    display: flex;
+   
+    position: relative;
+    
+    
+}
+ul {
+    display: flex;
+}
+li {
+    width: 100px;
+    height: 100px;
+    border: solid 6px rgb(0, 0, 0);
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    
+}
+.fon {
+    
+    
+}
+p {
+    color: rgb(230, 221, 95);
+    text-transform: uppercase;
+    
+}
