@@ -1,0 +1,43 @@
+
+
+.infomation {
+  display: flex;
+  .avka {
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-size: cover;
+  }
+  .commonInfo {
+    
+    .infoAutor {
+      display: flex;
+      margin-top: 10px;
+      
+      .nickName {
+       
+      }
+      .nameAutor {
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0 10px 0 10px;
+      }
+      .datePost {
+        font-size: 22px;
+        margin: 0 10px 0 10px;
+        color: lightslategrey;
+      }
+      .hideArrow {
+        margin-left: 300px;
+      }
+
+    }
+    .writePost {
+      margin-left: -150px;
+      font-size: 22px;
+    }
+  }
+
+}
